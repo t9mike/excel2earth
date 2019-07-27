@@ -21,7 +21,7 @@ namespace excel2earth
 
         public DegreesMinutesSeconds(string Longitude, string Latitude)
         {
-            Regex ValidCoordinate = new Regex(@"^(\d{6,7}|\d{2,3}\D\d{1,2}\D\d{1,2})(\.\d+)?\D?[NSEW]$");
+            Regex ValidCoordinate = new Regex(@"^(\d{6,7}|\d{1,3}\D\d{1,2}\D\d{1,2})(\.\d+)?\D?[NSEW]$");
 
             if (ValidCoordinate.Match(Longitude).Success)
             {
