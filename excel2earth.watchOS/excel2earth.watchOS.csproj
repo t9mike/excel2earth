@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16900066-4762-4BE7-8989-83319A92856A}</ProjectGuid>
+    <ProjectTypeGuids>{FC940695-DFE0-4552-9F25-99AF4A5619A1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>excel2earth.watchOS</RootNamespace>
+    <AssemblyName>excel2earth.watchOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <IOSDebuggerPort>56154</IOSDebuggerPort>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchLink></MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.WatchOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuple.cs">
+      <Link>GEOTRANS\CoordinateTuple.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem.cs">
+      <Link>GEOTRANS\CoordinateSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\Enumerations\CoordinateType.cs">
+      <Link>GEOTRANS\Enumerations\CoordinateType.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\Enumerations\Precision.cs">
+      <Link>GEOTRANS\Enumerations\Precision.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuples\GeodeticCoordinates.cs">
+      <Link>GEOTRANS\CoordinateTuples\GeodeticCoordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuples\UPSCoordinates.cs">
+      <Link>GEOTRANS\CoordinateTuples\UPSCoordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuples\UTMCoordinates.cs">
+      <Link>GEOTRANS\CoordinateTuples\UTMCoordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuples\MapProjectionCoordinates.cs">
+      <Link>GEOTRANS\CoordinateTuples\MapProjectionCoordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateTuples\MGRSorUSNGCoordinates.cs">
+      <Link>GEOTRANS\CoordinateTuples\MGRSorUSNGCoordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem\MGRS.cs">
+      <Link>GEOTRANS\CoordinateSystem\MGRS.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem\UPS.cs">
+      <Link>GEOTRANS\CoordinateSystem\UPS.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem\PolarStreographic.cs">
+      <Link>GEOTRANS\CoordinateSystem\PolarStreographic.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem\TransversMercator.cs">
+      <Link>GEOTRANS\CoordinateSystem\TransversMercator.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystem\UTM.cs">
+      <Link>GEOTRANS\CoordinateSystem\UTM.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters\EllipsoidParameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters\EllipsoidParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters\PolarStereographicScaleFactorParameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters\PolarStereographicScaleFactorParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters\UTMParameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters\UTMParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters\MapProjection5Parameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters\MapProjection5Parameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\CoordinateSystemParameters\PolarStereographicStandardParallelParameters.cs">
+      <Link>GEOTRANS\CoordinateSystemParameters\PolarStereographicStandardParallelParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\Exception\ErrorMessages.cs">
+      <Link>GEOTRANS\Exception\ErrorMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\Exception\WarningMessages.cs">
+      <Link>GEOTRANS\Exception\WarningMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\GEOTRANS\Exception\CoordinateConversionException.cs">
+      <Link>GEOTRANS\Exception\CoordinateConversionException.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat\DegreesMinutesSeconds.cs">
+      <Link>CoordinateFormat\DegreesMinutesSeconds.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat\DegreesDecimalMinutes.cs">
+      <Link>CoordinateFormat\DegreesDecimalMinutes.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat\MilitaryGridReferenceSystem.cs">
+      <Link>CoordinateFormat\MilitaryGridReferenceSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat\DecimalDegrees.cs">
+      <Link>CoordinateFormat\DecimalDegrees.cs</Link>
+    </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat.cs">
+      <Link>CoordinateFormat.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\WatchOS\Xamarin.WatchOS.CSharp.targets" />
+</Project>
