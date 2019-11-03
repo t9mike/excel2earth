@@ -21,7 +21,7 @@ namespace excel2earth
 
         public DegreesMinutesSeconds(string Longitude, string Latitude)
         {
-            Regex ValidCoordinate = new Regex(@"^(\d{6,7}|\d{1,3}\D\d{1,2}\D\d{1,2})(\.\d+)?\D?[NSEW]$");
+            Regex ValidCoordinate = new Regex(@"^(\d{6,7}|\d{1,3}\D\d{1,2}\D\d{1,2})([\.,]\d+)?\D?[NSEW]$");
 
             if (ValidCoordinate.Match(Longitude).Success)
             {
@@ -50,10 +50,10 @@ namespace excel2earth
             }
 
             // Regex Patterns
-            Regex noSeparator = new Regex(@"^\d{6,7}(\.\d+)?\W?[NSEW]$");
+            Regex noSeparator = new Regex(@"^\d{6,7}([\.,]\d+)?\W?[NSEW]$");
             Regex degrees = new Regex(@"\d{1,3}");
             Regex minutes = new Regex(@"\d{1,2}");
-            Regex seconds = new Regex(@"\d{1,2}(\.\d+)?");
+            Regex seconds = new Regex(@"\d{1,2}([\.,]\d+)?");
             Regex direction = new Regex(@"[NSEW]");
 
             string DegreesString;
