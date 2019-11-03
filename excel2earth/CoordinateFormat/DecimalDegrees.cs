@@ -105,7 +105,7 @@ namespace excel2earth
             int Degrees = (int)(coordinate);
             double Minutes = (coordinate - Degrees) * 60;
 
-            return Degrees.ToString("00" + ((type == CoordinateReferenceType.Longitude) ? "0" : "")) + "°" + Minutes.ToString("00.######") + "'" + Direction;
+            return Degrees.ToString("00" + ((type == CoordinateReferenceType.Longitude) ? "0" : "")) + "°" + DecimalFormat.Format(Minutes, 5) + "'" + Direction;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace excel2earth
             
             // Above make longitude degrees 3 places and latitude 2; do neither and
             // only show what is needed (match Google Maps output)
-            return Degrees.ToString() + "°" + Minutes.ToString("00") + "'" + Seconds.ToString("00.##") + "\"" + Direction;
+            return Degrees.ToString() + "°" + Minutes.ToString("00") + "'" + DecimalFormat.Format(Seconds, 2) + "\"" + Direction;
         }
 
         public bool TryParse(string longitude, string latitude, out DecimalDegrees result)

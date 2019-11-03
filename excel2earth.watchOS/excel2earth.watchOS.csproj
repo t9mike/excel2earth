@@ -134,6 +134,9 @@
     <Compile Include="..\excel2earth\CoordinateFormat.cs">
       <Link>CoordinateFormat.cs</Link>
     </Compile>
+    <Compile Include="..\excel2earth\CoordinateFormat\DecimalFormat.cs">
+      <Link>CoordinateFormat\DecimalFormat.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\WatchOS\Xamarin.WatchOS.CSharp.targets" />
 </Project>
